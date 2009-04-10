@@ -23,11 +23,16 @@ def endsWith(s, *endings):
     return anyTrue(s.endswith, endings)
 
 
-for path in all_files('./', '*.h'):
+for path in all_files('./', '*.cpp'):
     out = open(path, 'r')
     L = out.readlines()
     out.close()
     for s in xrange(len(L)):
-        if L[s] != '\n' and ((L[s].startswith("//") is False) and (L[s].startswith('#') is False)):
-            print L[s]
+	    if 'Magick' in L[s] and not 'include' in L[s]:
+		    print L[s]
+
+
+
+#        if L[s] != '\n' and ((L[s].startswith("//") is False) and (L[s].startswith('#') is False)):
+ #           print L[s]
     
