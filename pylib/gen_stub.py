@@ -29,6 +29,7 @@ for s in xrange(len(L)):
         lines.append(L[s].replace('\n','').replace(';',''))
         
 output.writelines("""#include <konoha.h>
+#include <wand/MagickWand.h>
 
 """)
 
@@ -153,8 +154,8 @@ METHOD %s(Ctx *ctx, knh_sfp_t* sfp)
             #when no arg is set
             print "no arg func"
         #now, ready for library dependent part. 
-        
-        funcname = "".join((thisclass.replace("Wand",""), thismethod.replace(thismethod[0], thismethod[0].capitalize())))
+        thismethod = thismethod[0].upper() + thismethod[1:]
+        funcname = "".join((thisclass.replace("Wand",""), thismethod))
         funccall = funcname + "("
         
         if args != []:
