@@ -51,6 +51,27 @@ METHOD MagickWand_getHomeURL(Ctx *ctx, knh_sfp_t* sfp)
 	KNH_RETURN(ctx, sfp, new_String(ctx, B(ret), NULL));
 }
 
+/* String MagickWand.getOption(self, String s1) */
+
+METHOD MagickWand_getOption(Ctx *ctx, knh_sfp_t* sfp)
+{
+	MagickWand *self =(MagickWand*)((sfp[0].glue)->ptr);
+	char *s1 = p_char(sfp[1]);
+	char *ret = MagickGetOption(self ,s1 );
+
+	KNH_RETURN(ctx, sfp, new_String(ctx, B(ret), NULL));
+}
+
+/* String MagickWand.queryConfigureOption(String s1) */
+
+METHOD MagickWand_queryConfigureOption(Ctx *ctx, knh_sfp_t* sfp)
+{
+	char *s1 = p_char(sfp[0]);
+	char *ret = MagickQueryConfigureOption(s1 );
+
+	KNH_RETURN(ctx, sfp, new_String(ctx, B(ret), NULL));
+}
+
 /* MagickWand MagickWand.averageImages(self) */
 
 METHOD MagickWand_averageImages(Ctx *ctx, knh_sfp_t* sfp)
@@ -1061,6 +1082,7 @@ METHOD MagickWand_getCompressionQuality(Ctx *ctx, knh_sfp_t* sfp)
 METHOD MagickWand_new(Ctx *ctx, knh_sfp_t* sfp)
 {
   knh_Glue_t *glue = sfp[0].glue;
+  MagickWandGenesis();
   glue->ptr = (void *)NewMagickWand();
   KNH_RETURN(ctx, sfp, sfp[0].o);
 }
