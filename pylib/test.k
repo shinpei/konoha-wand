@@ -1,2 +1,5 @@
+class Test;
+class Sample;
 
-void test.hi(self, Float f);
+Test Test.new(self);
+void Test.hi(self, Sample s, Float f);
