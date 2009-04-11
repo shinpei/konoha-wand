@@ -72,6 +72,7 @@ ARGS = {
     'Float': 'float %s = p_float(sfp[%d])',
     'float': 'float %s = p_float(sfp[%d])',
     'Array': 'Array *%s = (Array*)sfp[%d].o',
+    'Boolean': 'int *%s = p_int(sfp[%d])'
     }
 
 PREFIX = [
@@ -116,12 +117,13 @@ for s in lines:
 METHOD %s(Ctx *ctx, knh_sfp_t* sfp)
 {
 """ % (s,bindingname))
+        types=[]
+        args=[]
+
         if len(a) > 3:
             tmp = a[3:]
             print 'tmp:',tmp
             num = 0
-            types=[]
-            args=[]
             selfflag = 0;
             for line in tmp:
                 if num % 2 is 0:
@@ -154,17 +156,18 @@ METHOD %s(Ctx *ctx, knh_sfp_t* sfp)
         
         funcname = "".join((thisclass.replace("Wand",""), thismethod.replace(thismethod[0], thismethod[0].capitalize())))
         funccall = funcname + "("
-        for idx in xrange(len(args)):
-            if idx is 0:
-                funccall = funccall + "%s " % args[idx]
-            else:
-                funccall = funccall + ",%s " % args[idx]
+        
+        if args != []:
+            for idx in xrange(len(args)):
+                if idx is 0:
+                    funccall = funccall + "%s " % args[idx]
+                else:
+                    funccall = funccall + ",%s " % args[idx]
         funccall = funccall + ")"
         retval = RETURNS[thisreturn]
         if not retval is '':
             retval = retval + "ret = "
-        output.writelines("\t" + retval + funccall + ";\n")
-
+            output.writelines("\t" + retval + funccall + ";\n")
 
         #now, make KNH_RETURN.    
         s.replace('!','')
