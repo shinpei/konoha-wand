@@ -69,7 +69,6 @@ Int MagickWand.getNumberImages(self);
 Int MagickWand.getIteratorIndex(self);
 
 Boolean MagickWand.isMagickWand(self);
-Boolean MagickWand.clearException(self);
 Boolean MagickWand.setIteratorIndex(self, int i1);
 
 
