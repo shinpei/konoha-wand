@@ -1,0 +1,9 @@
+
+python ../pylib/gen_stub.py imagemagick.k
+mv stub_imagemagick.c imagemagick.c
+make clean
+make
+make konoha_install
+./selfclean.py imagemagick.k
+cp out .konoha/imagemagick/imagemagick.k
+konoha

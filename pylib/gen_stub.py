@@ -73,7 +73,7 @@ ARGS = {
     'Float': 'float %s = p_float(sfp[%d])',
     'float': 'float %s = p_float(sfp[%d])',
     'Array': 'Array *%s = (Array*)sfp[%d].o',
-    'Boolean': 'int *%s = p_int(sfp[%d])'
+    'Boolean': 'int %s = p_int(sfp[%d])'
     }
 
 PREFIX = [
@@ -184,5 +184,13 @@ METHOD %s(Ctx *ctx, knh_sfp_t* sfp)
             output.writelines("""
 }
 """)
+output.writelines('''
 
+METHOD MagickWand_new(Ctx *ctx, knh_sfp_t* sfp)
+{
+  knh_Glue_t *glue = sfp[0].glue;
+  glue->ptr = (void *)NewMagickWand();
+  KNH_RETURN(ctx, sfp, sfp[0].o);
+}
+''')
 output.close()
