@@ -125,7 +125,6 @@ METHOD %s(Ctx *ctx, knh_sfp_t* sfp)
             tmp = a[3:]
             print 'tmp:',tmp
             num = 0
-            selfflag = 0;
             for line in tmp:
                 if num % 2 is 0:
                     if 'self' in line:
@@ -141,14 +140,21 @@ METHOD %s(Ctx *ctx, knh_sfp_t* sfp)
             dargs = dict(zip(args, types))
 
             #now, get ready to get arguments.
-
+            selfFlag = False
             for idx in xrange(len(args)):
                 key = types[idx]
                 if ARGS.has_key(key):
                     val = ARGS[key]
-                    output.writelines("""\t%s;
-""" % (val % (args[idx], idx)))
-                    
+                    if key == thisclass:
+                        selfFlag = True
+                        output.writelines('''\t%s;
+''' % (val % (args[idx], idx)))
+                    elif selfFlag == True:
+                        output.writelines('''\t%s;
+''' % (val % (args[idx], idx)))
+                    else:
+                        output.writelines('''\t%s;
+''' % (val % (args[idx], idx+1)))
         
         else: 
             #when no arg is set

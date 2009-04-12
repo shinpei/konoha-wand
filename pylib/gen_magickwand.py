@@ -32,10 +32,12 @@ def anyTrue(predicate, sequence):
 def endsWith(s, *endings):
     return anyTrue(s.endswith, endings)
 
-#
+# valuables for function interface, returns funcnames(arguments[])
 returns = []
-arguments = []
 funcnames = []
+arguments = []
+
+print "class %s;" % classname
 
 for path in all_files('./', '*.cpp'):
     out = open(path, 'r')
