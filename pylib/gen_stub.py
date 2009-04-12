@@ -164,18 +164,19 @@ METHOD %s(Ctx *ctx, knh_sfp_t* sfp)
         funcname = "".join((thisclass.replace("Wand",""), thismethod))
         funccall = funcname + "("
         
-        if args != []:
-            for idx in xrange(len(args)):
-                if idx is 0:
-                    funccall = funccall + "%s " % args[idx]
-                else:
-                    funccall = funccall + ",%s " % args[idx]
+        for idx in xrange(len(args)):
+            if idx is 0:
+                funccall = funccall + "%s " % args[idx]
+            else:
+                funccall = funccall + ",%s " % args[idx]
         funccall = funccall + ")"
         retval = RETURNS[thisreturn]
         if not retval is '':
             retval = retval + "ret = "
             output.writelines("\t" + retval + funccall + ";\n")
-
+        else:
+            #which means 'void', just call function
+            output.writelines("\t" + funccall + ";\n")
         #now, make KNH_RETURN.    
         s.replace('!','')
         key = a[0]
