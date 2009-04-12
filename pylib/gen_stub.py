@@ -29,6 +29,7 @@ for s in xrange(len(L)):
         lines.append(L[s].replace('\n','').replace(';',''))
         
 output.writelines("""#include <konoha.h>
+#include <wand/MagickWand.h>
 
 """)
 
@@ -72,6 +73,7 @@ ARGS = {
     'Float': 'float %s = p_float(sfp[%d])',
     'float': 'float %s = p_float(sfp[%d])',
     'Array': 'Array *%s = (Array*)sfp[%d].o',
+    'Boolean': 'int %s = p_int(sfp[%d])'
     }
 
 PREFIX = [
@@ -106,7 +108,7 @@ for s in lines:
     while '' in a: a.remove('')
 #    if not a[0] in PREFIX and len(a) > 2:
     if funcflag is True:
-        thisreturn = a[0];
+        thisreturn = a[0].replace("!","");
         thisclass = a[1];
         thismethod = a[2];
         bindingname = "".join((a[1], "_" ,a[2]))
@@ -116,12 +118,13 @@ for s in lines:
 METHOD %s(Ctx *ctx, knh_sfp_t* sfp)
 {
 """ % (s,bindingname))
+        types=[]
+        args=[]
+
         if len(a) > 3:
             tmp = a[3:]
             print 'tmp:',tmp
             num = 0
-            types=[]
-            args=[]
             selfflag = 0;
             for line in tmp:
                 if num % 2 is 0:
@@ -151,20 +154,21 @@ METHOD %s(Ctx *ctx, knh_sfp_t* sfp)
             #when no arg is set
             print "no arg func"
         #now, ready for library dependent part. 
-        
-        funcname = "".join((thisclass.replace("Wand",""), thismethod.replace(thismethod[0], thismethod[0].capitalize())))
+        thismethod = thismethod[0].upper() + thismethod[1:]
+        funcname = "".join((thisclass.replace("Wand",""), thismethod))
         funccall = funcname + "("
-        for idx in xrange(len(args)):
-            if idx is 0:
-                funccall = funccall + "%s " % args[idx]
-            else:
-                funccall = funccall + ",%s " % args[idx]
+        
+        if args != []:
+            for idx in xrange(len(args)):
+                if idx is 0:
+                    funccall = funccall + "%s " % args[idx]
+                else:
+                    funccall = funccall + ",%s " % args[idx]
         funccall = funccall + ")"
         retval = RETURNS[thisreturn]
         if not retval is '':
             retval = retval + "ret = "
-        output.writelines("\t" + retval + funccall + ";\n")
-
+            output.writelines("\t" + retval + funccall + ";\n")
 
         #now, make KNH_RETURN.    
         s.replace('!','')
@@ -180,5 +184,14 @@ METHOD %s(Ctx *ctx, knh_sfp_t* sfp)
             output.writelines("""
 }
 """)
+output.writelines('''
 
+METHOD MagickWand_new(Ctx *ctx, knh_sfp_t* sfp)
+{
+  knh_Glue_t *glue = sfp[0].glue;
+  MagickWandGenesis();
+  glue->ptr = (void *)NewMagickWand();
+  KNH_RETURN(ctx, sfp, sfp[0].o);
+}
+''')
 output.close()
