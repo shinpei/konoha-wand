@@ -1,0 +1,14 @@
+
+class Surface;
+
+Surface s = new Surface()
+//
+METHOD Surface_new(Ctx ..)
+{
+	struct glue {
+            void *ptr;
+        }
+ 
+}
+
+

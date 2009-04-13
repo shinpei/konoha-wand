@@ -1,0 +1,9 @@
+
+python gen_stub_gd.py gd.k
+mv stub_gd.c gd.c
+make clean
+make
+make konoha_install
+./selfclean.py gd.k
+cp out .konoha/gd/gd.k
+konoha
