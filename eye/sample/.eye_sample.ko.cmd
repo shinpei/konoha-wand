@@ -1,0 +1,1 @@
+cmd_/home/tsunade/Developmenet/eye/sample/eye_sample.ko := ld -r -m elf_i386  --build-id -o /home/tsunade/Developmenet/eye/sample/eye_sample.ko /home/tsunade/Developmenet/eye/sample/eye_sample.o /home/tsunade/Developmenet/eye/sample/eye_sample.mod.o
