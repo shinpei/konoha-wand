@@ -1,0 +1,24 @@
+#ifndef __EYE_H
+#define __EYE_H
+
+#include <linux/module.h>
+#include <linux/security.h>
+#include <linux/list.h>
+#include <linux/slab.h>
+#include <linux/relay.h>
+#include <linux/kprobes.h>
+#include <linux/debugfs.h>
+#include <linux/kernel.h>
+
+struct kernel_eye  {
+  struct rchan *chan;
+  struct eye_funcs *funcs;
+
+};
+
+extern int keye_write(struct kernel_eye *eye, char *line, size_t size);
+extern struct kernel_eye *new_kerneleye(void);
+extern int register_kerneleye_func(void);
+extern void free_kerneleye(struct kernel_eye *eye);
+
+#endif
