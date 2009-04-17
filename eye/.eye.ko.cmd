@@ -1,1 +1,0 @@
-cmd_/home/tsunade/Developmenet/konoha-wand/eye/eye.ko := ld -r -m elf_i386  --build-id -o /home/tsunade/Developmenet/konoha-wand/eye/eye.ko /home/tsunade/Developmenet/konoha-wand/eye/eye.o /home/tsunade/Developmenet/konoha-wand/eye/eye.mod.o

@@ -1,4 +1,0 @@
-#!/bin/sh
-
-sudo insmod eye.ko
-sudo insmod sample/eye_sample.ko 
