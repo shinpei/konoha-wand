@@ -1,8 +1,8 @@
-cmd_/home/tsunade/Developmenet/eye/eye.o := gcc -Wp,-MD,/home/tsunade/Developmenet/eye/.eye.o.d  -nostdinc -isystem /usr/lib/gcc/i386-redhat-linux/4.3.0/include -D__KERNEL__ -Iinclude  -include include/linux/autoconf.h -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Os  -fno-stack-protector -m32 -msoft-float -mregparm=3 -freg-struct-return -mpreferred-stack-boundary=2  -march=i686 -mtune=generic -mtune=generic -ffreestanding -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Iinclude/asm-x86/mach-generic -Iinclude/asm-x86/mach-default -fno-omit-frame-pointer -fno-optimize-sibling-calls -g -Wdeclaration-after-statement -Wno-pointer-sign    -DMODULE -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(eye)"  -D"KBUILD_MODNAME=KBUILD_STR(eye)" -c -o /home/tsunade/Developmenet/eye/eye.o /home/tsunade/Developmenet/eye/eye.c
+cmd_/home/tsunade/Developmenet/konoha-wand/eye/eye.o := gcc -Wp,-MD,/home/tsunade/Developmenet/konoha-wand/eye/.eye.o.d  -nostdinc -isystem /usr/lib/gcc/i386-redhat-linux/4.3.0/include -D__KERNEL__ -Iinclude  -include include/linux/autoconf.h -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Os  -fno-stack-protector -m32 -msoft-float -mregparm=3 -freg-struct-return -mpreferred-stack-boundary=2  -march=i686 -mtune=generic -mtune=generic -ffreestanding -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Iinclude/asm-x86/mach-generic -Iinclude/asm-x86/mach-default -fno-omit-frame-pointer -fno-optimize-sibling-calls -g -Wdeclaration-after-statement -Wno-pointer-sign    -DMODULE -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(eye)"  -D"KBUILD_MODNAME=KBUILD_STR(eye)" -c -o /home/tsunade/Developmenet/konoha-wand/eye/eye.o /home/tsunade/Developmenet/konoha-wand/eye/eye.c
 
-deps_/home/tsunade/Developmenet/eye/eye.o := \
-  /home/tsunade/Developmenet/eye/eye.c \
-  /home/tsunade/Developmenet/eye/eye.h \
+deps_/home/tsunade/Developmenet/konoha-wand/eye/eye.o := \
+  /home/tsunade/Developmenet/konoha-wand/eye/eye.c \
+  /home/tsunade/Developmenet/konoha-wand/eye/eye.h \
   include/linux/module.h \
     $(wildcard include/config/alpha.h) \
     $(wildcard include/config/ia64.h) \
@@ -471,8 +471,8 @@ deps_/home/tsunade/Developmenet/eye/eye.o := \
   include/linux/ptrace.h \
   include/linux/debugfs.h \
     $(wildcard include/config/debug/fs.h) \
-  /home/tsunade/Developmenet/eye/eye_debug.h \
+  /home/tsunade/Developmenet/konoha-wand/eye/eye_debug.h \
 
-/home/tsunade/Developmenet/eye/eye.o: $(deps_/home/tsunade/Developmenet/eye/eye.o)
+/home/tsunade/Developmenet/konoha-wand/eye/eye.o: $(deps_/home/tsunade/Developmenet/konoha-wand/eye/eye.o)
 
-$(deps_/home/tsunade/Developmenet/eye/eye.o):
+$(deps_/home/tsunade/Developmenet/konoha-wand/eye/eye.o):

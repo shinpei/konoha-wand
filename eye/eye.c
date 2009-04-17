@@ -154,13 +154,9 @@ void keye_new_interval_with_init(struct kernel_eye *eye, int initiate)
 static int init_keye(void)
 {
   int ret;
-  float a = 1.233;
-  
   registered_eyes = 0;
   g_chan = relay_open(RELAYNAME, NULL, 1024, 4, &relay_callbacks, NULL);
   
-  printk("%d\n", (int)(a + 0.8)); 
-
   KEYE_DEBUG("create relay !");
   return 0;
 }
