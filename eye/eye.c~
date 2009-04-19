@@ -1,0 +1,114 @@
+
+
+#define RELAYNAME "keye"
+
+#include "eye.h"
+#include "eye_debug.h"
+
+MODULE_LICENSE("GPL");
+MODULE_AUTHOR("Shinpei Nakata");
+MODULE_DESCRIPTION("Kernel eye v0.01");
+
+static int mymallocsize;
+
+struct rchan *g_chan;
+
+
+#define _keye_malloc(size) \
+  kmalloc(size, GFP_KERNEL); \
+  mymallocsize += size;
+
+static void *keye_malloc(size_t size)
+{
+  void *p;
+  p = kmalloc(size, GFP_KERNEL);
+  mymallocsize += size;
+  return p;
+}
+
+static void keye_free(size_t size, void *ptr)
+{
+  kfree(ptr);
+  mymallocsize -= size;
+}
+
+#define _keye_zalloc(size) \
+  kzalloc(size, GFP_KERNEL)
+
+
+struct rchan *chan;
+
+int keye_write(struct kernel_eye *eye, char *line, size_t size)
+{
+  relay_write(eye->chan, line, size);
+  return 0;
+}
+
+EXPORT_SYMBOL(keye_write);
+
+static struct dentry *create_buf_file_handler(const char *filename,
+					      struct dentry *parent,
+					      int mode,
+					      struct rchan_buf *buf,
+					      int *is_global)
+{
+  return debugfs_create_file(filename, mode, parent, buf,
+			     &relay_file_operations);
+
+}
+
+static int remove_buf_file_handler(struct dentry *dentry)
+{
+  debugfs_remove(dentry);
+  return 0;
+}
+
+static struct rchan_callbacks relay_callbacks = 
+  {
+    .create_buf_file = create_buf_file_handler, 
+    .remove_buf_file = remove_buf_file_handler,
+  };
+
+
+struct kernel_eye *new_kerneleye(void)
+{
+  struct kernel_eye *ret;
+  ret = (struct kernel_eye *)keye_malloc(sizeof(struct kernel_eye));
+  ret->chan = g_chan;
+  
+  return ret;
+}
+EXPORT_SYMBOL(new_kerneleye);
+
+
+void free_kerneleye(struct kernel_eye *eye)
+{
+  /* freeing kernel_eye instance */
+  keye_free(eye, sizeof(struct kernel_eye));
+}
+EXPORT_SYMBOL(free_kerneleye);
+
+int register_kerneleye_func(void)
+{
+
+}
+EXPORT_SYMBOL(register_kerneleye_func);
+
+static int init_keye(void)
+{
+  int ret;
+  g_chan = relay_open(RELAYNAME, NULL, 1024, 4, &relay_callbacks, NULL);
+
+  KEYE_DEBUG("create relay !");
+  return 0;
+}
+
+static void exit_keye(void)
+{
+  relay_close(g_chan);
+}
+
+module_init(init_keye);
+module_exit(exit_keye);
+
+
