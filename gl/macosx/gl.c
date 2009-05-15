@@ -1864,17 +1864,7 @@ METHOD GL_glVertex3d(Ctx *ctx, knh_sfp_t* sfp)
 	KNH_RETURN_void(ctx, sfp);
 }
 
-/* void GL.glVertex3f(Float f0, Float f1, Float f2) */
 
-METHOD GL_glVertex3f(Ctx *ctx, knh_sfp_t* sfp)
-{
-	float f0 = p_float(sfp[1]);
-	float f1 = p_float(sfp[2]);
-	float f2 = p_float(sfp[3]);
-	glVertex3f(f0 ,f1 ,f2 );
-
-	KNH_RETURN_void(ctx, sfp);
-}
 
 /* void GL.glVertex3i(Int i0, Int i1, Int i2) */
 

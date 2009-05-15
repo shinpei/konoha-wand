@@ -1,23 +1,41 @@
+/*---------------------------------
+ * OpenGL Binding for konoha
+ *
+ * shinpei nakata(c)2009
+ * kindofbrown@users.sourceforge.jp
+ *
+ *---------------------------------*/
+
 #include <konoha.h>
+
+#ifdef KONOHA_OS__MACOSX
 #include <OpenGL/gl.h>
 #include <GLUT/glut.h>
+#include <pthread.h>
+#endif
 
-Method *displayfunc;
+#ifdef KONOHA_OS__LINUX
+#include <GL/glut.h>
+#endif
+
+Closure *displayfunc;
+static knh_thread_key_t lctxkey;
 
 static
 void knh_display(void)
 {
   Ctx *ctx = konoha_getCurrentContext();
-  knh_sfp_t *lsfp = KNH_LOCAL(ctx);
-  KNH_SCALL(ctx, lsfp, -1, displayfunc, 0);
+  Ctx *lctx = konoha_getThreadContext(ctx);
+  knh_sfp_t *lsfp = KNH_LOCAL(lctx);
+  
+  knh_Closure_invokesfp(lctx, displayfunc, lsfp, 0);
+  //  KNH_SCALL(ctx, lsfp, -1, displayfunc, 0);
   //  displayfunc->fcall_1(ctx, lsfp);
 }
 
 METHOD GL_glutInit(Ctx *ctx, knh_sfp_t *sfp)
 {
   int i, argc;
-  //  char argv0[] = "./konoha";
-  //  char argv1[] = "./gl_sample.k";
   char **argv;
   Array *a = (Array *)sfp[1].o;
   argc = knh_Array_size(a);
@@ -25,9 +43,6 @@ METHOD GL_glutInit(Ctx *ctx, knh_sfp_t *sfp)
   for (i = 0; i < argc; i++) {
 	argv[i] = knh_String_tochar((String *)knh_Array_n(a, i));
   }
-  //  argv[0] = argv0;
-  //  argv[1] = argv1;
-  //snprintf(argv[0], sizeof("./konoha"), "%s","./konoha"); 
   glutInit(&argc, argv);
   KNH_RETURN_void(ctx, sfp);
 }
@@ -39,16 +54,33 @@ METHOD GL_glutCreateWindow(Ctx *ctx, knh_sfp_t *sfp)
   KNH_RETURN_void(ctx, sfp);
 }
 
+void *thread_func(void *param)
+{
+  fprintf(stderr, "goodbye\n");
+  glutMainLoop();
+}
+
 METHOD GL_glutMainLoop(Ctx *ctx, knh_sfp_t *sfp)
 {
+#ifdef KNH_USING_PTHREAD
+  fprintf(stderr, "hi\n");
   glutMainLoop();
+#else
+  pthread_t thread;
+  pthread_key_create(&lctxkey, NULL);
+  //  pthread_key_
+
+  if (pthread_create(&thread, NULL, thread_func, NULL))
+	  perror("cannot create thread");
+  pthread_join(thread, NULL);
+#endif
 
   KNH_RETURN_void(ctx, sfp);
 }
 
 METHOD GL_glutDisplayFunc(Ctx *ctx, knh_sfp_t *sfp)
 {
-  displayfunc = sfp[1].mtd;
+  displayfunc = sfp[1].cc;
   glutDisplayFunc(knh_display);
   KNH_RETURN_void(ctx, sfp);
 }
