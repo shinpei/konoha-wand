@@ -1,0 +1,16 @@
+CLASS: MagickWand is defined.
+tmp: ['self']
+tmp: ['self']
+tmp: ['self']
+tmp: ['self']
+no arg func
+no arg func
+no arg func
+no arg func
+tmp: ['int', 'f1']
+tmp: ['self', 'String', 's1']
+tmp: ['self', 'Float', 'f1']
+tmp: ['self', 'Float', 'f1', 'Float', 'f2']
+tmp: ['self', 'int', 'f1', 'int', 'f2']
+tmp: ['self']
+tmp: ['self']
