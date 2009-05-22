@@ -1,6 +1,6 @@
 #!/usr/bin/python
 import os, sys
-classname = 'MagickWand'
+classname = 'ImageMagick'
 input = open(sys.argv[1], 'r')
 output = open("out", 'w')
 L = input.readlines()
@@ -18,7 +18,3 @@ for s in xrange(len(L)):
 		output.writelines(line)
 	else:
 		output.writelines(L[s])
-if newflag == False:
-	output.writelines('''
-%s %s.new();''' % (classname, classname))
-output.close()
