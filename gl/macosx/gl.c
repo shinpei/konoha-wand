@@ -2,6 +2,236 @@
 #include <GLUT/glut.h>
 #include <OpenGL/gl.h>
 
+/* void GL.glActiveTextureARB(Int i0) */
+
+METHOD GL_glActiveTextureARB(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	glActiveTextureARB(i0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glClientActiveTextureARB(Int i0) */
+
+METHOD GL_glClientActiveTextureARB(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	glClientActiveTextureARB(i0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord1dARB(Int i0, Float f1) */
+
+METHOD GL_glMultiTexCoord1dARB(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	float f1 = p_float(sfp[2]);
+	glMultiTexCoord1dARB(i0 ,f1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord1fARB(Int i0, Float f1) */
+
+METHOD GL_glMultiTexCoord1fARB(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	float f1 = p_float(sfp[2]);
+	glMultiTexCoord1fARB(i0 ,f1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord1iARB(Int i0, Int i1) */
+
+METHOD GL_glMultiTexCoord1iARB(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glMultiTexCoord1iARB(i0 ,i1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord1sARB(Int i0, Int i1) */
+
+METHOD GL_glMultiTexCoord1sARB(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glMultiTexCoord1sARB(i0 ,i1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord2dARB(Int i0, Float f1, Float f2) */
+
+METHOD GL_glMultiTexCoord2dARB(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	float f1 = p_float(sfp[2]);
+	float f2 = p_float(sfp[3]);
+	glMultiTexCoord2dARB(i0 ,f1 ,f2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord2fARB(Int i0, Float f1, Float f2) */
+
+METHOD GL_glMultiTexCoord2fARB(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	float f1 = p_float(sfp[2]);
+	float f2 = p_float(sfp[3]);
+	glMultiTexCoord2fARB(i0 ,f1 ,f2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord2iARB(Int i0, Int i1, Int i2) */
+
+METHOD GL_glMultiTexCoord2iARB(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	glMultiTexCoord2iARB(i0 ,i1 ,i2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord2sARB(Int i0, Int i1, Int i2) */
+
+METHOD GL_glMultiTexCoord2sARB(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	glMultiTexCoord2sARB(i0 ,i1 ,i2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord3dARB(Int i0, Float f1, Float f2, Float f3) */
+
+METHOD GL_glMultiTexCoord3dARB(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	float f1 = p_float(sfp[2]);
+	float f2 = p_float(sfp[3]);
+	float f3 = p_float(sfp[4]);
+	glMultiTexCoord3dARB(i0 ,f1 ,f2 ,f3 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord3fARB(Int i0, Float f1, Float f2, Float f3) */
+
+METHOD GL_glMultiTexCoord3fARB(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	float f1 = p_float(sfp[2]);
+	float f2 = p_float(sfp[3]);
+	float f3 = p_float(sfp[4]);
+	glMultiTexCoord3fARB(i0 ,f1 ,f2 ,f3 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord3iARB(Int i0, Int i1, Int i2, Int i3) */
+
+METHOD GL_glMultiTexCoord3iARB(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	int i3 = p_int(sfp[4]);
+	glMultiTexCoord3iARB(i0 ,i1 ,i2 ,i3 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord3sARB(Int i0, Int i1, Int i2, Int i3) */
+
+METHOD GL_glMultiTexCoord3sARB(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	int i3 = p_int(sfp[4]);
+	glMultiTexCoord3sARB(i0 ,i1 ,i2 ,i3 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord4dARB(Int i0, Float f1, Float f2, Float f3, Float f4) */
+
+METHOD GL_glMultiTexCoord4dARB(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	float f1 = p_float(sfp[2]);
+	float f2 = p_float(sfp[3]);
+	float f3 = p_float(sfp[4]);
+	float f4 = p_float(sfp[5]);
+	glMultiTexCoord4dARB(i0 ,f1 ,f2 ,f3 ,f4 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord4fARB(Int i0, Float f1, Float f2, Float f3, Float f4) */
+
+METHOD GL_glMultiTexCoord4fARB(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	float f1 = p_float(sfp[2]);
+	float f2 = p_float(sfp[3]);
+	float f3 = p_float(sfp[4]);
+	float f4 = p_float(sfp[5]);
+	glMultiTexCoord4fARB(i0 ,f1 ,f2 ,f3 ,f4 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord4iARB(Int i0, Int i1, Int i2, Int i3, Int i4) */
+
+METHOD GL_glMultiTexCoord4iARB(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	int i3 = p_int(sfp[4]);
+	int i4 = p_int(sfp[5]);
+	glMultiTexCoord4iARB(i0 ,i1 ,i2 ,i3 ,i4 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord4sARB(Int i0, Int i1, Int i2, Int i3, Int i4) */
+
+METHOD GL_glMultiTexCoord4sARB(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	int i3 = p_int(sfp[4]);
+	int i4 = p_int(sfp[5]);
+	glMultiTexCoord4sARB(i0 ,i1 ,i2 ,i3 ,i4 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glSamplePassARB(Int i0) */
+
+METHOD GL_glSamplePassARB(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	glSamplePassARB(i0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
 /* void GL.glVertexBlendARB(Int i0) */
 
 METHOD GL_glVertexBlendARB(Ctx *ctx, knh_sfp_t* sfp)
@@ -100,6 +330,109 @@ METHOD GL_glWindowPos3sARB(Ctx *ctx, knh_sfp_t* sfp)
 	int i1 = p_int(sfp[2]);
 	int i2 = p_int(sfp[3]);
 	glWindowPos3sARB(i0 ,i1 ,i2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glBeginQueryARB(Int i0, Int i1) */
+
+METHOD GL_glBeginQueryARB(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glBeginQueryARB(i0 ,i1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glEndQueryARB(Int i0) */
+
+METHOD GL_glEndQueryARB(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	glEndQueryARB(i0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glPointParameterfARB(Int i0, Float f1) */
+
+METHOD GL_glPointParameterfARB(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	float f1 = p_float(sfp[2]);
+	glPointParameterfARB(i0 ,f1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glBindProgramARB(Int i0, Int i1) */
+
+METHOD GL_glBindProgramARB(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glBindProgramARB(i0 ,i1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glProgramEnvParameter4dARB(Int i0, Int i1, Float f2, Float f3, Float f4, Float f5) */
+
+METHOD GL_glProgramEnvParameter4dARB(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	float f2 = p_float(sfp[3]);
+	float f3 = p_float(sfp[4]);
+	float f4 = p_float(sfp[5]);
+	float f5 = p_float(sfp[6]);
+	glProgramEnvParameter4dARB(i0 ,i1 ,f2 ,f3 ,f4 ,f5 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glProgramEnvParameter4fARB(Int i0, Int i1, Float f2, Float f3, Float f4, Float f5) */
+
+METHOD GL_glProgramEnvParameter4fARB(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	float f2 = p_float(sfp[3]);
+	float f3 = p_float(sfp[4]);
+	float f4 = p_float(sfp[5]);
+	float f5 = p_float(sfp[6]);
+	glProgramEnvParameter4fARB(i0 ,i1 ,f2 ,f3 ,f4 ,f5 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glProgramLocalParameter4dARB(Int i0, Int i1, Float f2, Float f3, Float f4, Float f5) */
+
+METHOD GL_glProgramLocalParameter4dARB(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	float f2 = p_float(sfp[3]);
+	float f3 = p_float(sfp[4]);
+	float f4 = p_float(sfp[5]);
+	float f5 = p_float(sfp[6]);
+	glProgramLocalParameter4dARB(i0 ,i1 ,f2 ,f3 ,f4 ,f5 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glProgramLocalParameter4fARB(Int i0, Int i1, Float f2, Float f3, Float f4, Float f5) */
+
+METHOD GL_glProgramLocalParameter4fARB(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	float f2 = p_float(sfp[3]);
+	float f3 = p_float(sfp[4]);
+	float f4 = p_float(sfp[5]);
+	float f5 = p_float(sfp[6]);
+	glProgramLocalParameter4fARB(i0 ,i1 ,f2 ,f3 ,f4 ,f5 );
 
 	KNH_RETURN_void(ctx, sfp);
 }
@@ -374,6 +707,40 @@ METHOD GL_glUniform4iARB(Ctx *ctx, knh_sfp_t* sfp)
 	KNH_RETURN_void(ctx, sfp);
 }
 
+/* void GL.glBindBufferARB(Int i0, Int i1) */
+
+METHOD GL_glBindBufferARB(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glBindBufferARB(i0 ,i1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glBlendColorEXT(Float f0, Float f1, Float f2, Float f3) */
+
+METHOD GL_glBlendColorEXT(Ctx *ctx, knh_sfp_t* sfp)
+{
+	float f0 = p_float(sfp[1]);
+	float f1 = p_float(sfp[2]);
+	float f2 = p_float(sfp[3]);
+	float f3 = p_float(sfp[4]);
+	glBlendColorEXT(f0 ,f1 ,f2 ,f3 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glBlendEquationEXT(Int i0) */
+
+METHOD GL_glBlendEquationEXT(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	glBlendEquationEXT(i0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
 /* void GL.glUnlockArraysEXT() */
 
 METHOD GL_glUnlockArraysEXT(Ctx *ctx, knh_sfp_t* sfp)
@@ -463,6 +830,240 @@ METHOD GL_glFogCoorddEXT(Ctx *ctx, knh_sfp_t* sfp)
 	KNH_RETURN_void(ctx, sfp);
 }
 
+/* void GL.glBlendFuncSeparateEXT(Int i0, Int i1, Int i2, Int i3) */
+
+METHOD GL_glBlendFuncSeparateEXT(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	int i3 = p_int(sfp[4]);
+	glBlendFuncSeparateEXT(i0 ,i1 ,i2 ,i3 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glActiveStencilFaceEXT(Int i0) */
+
+METHOD GL_glActiveStencilFaceEXT(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	glActiveStencilFaceEXT(i0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glBlendEquationSeparateEXT(Int i0, Int i1) */
+
+METHOD GL_glBlendEquationSeparateEXT(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glBlendEquationSeparateEXT(i0 ,i1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glBindRenderbufferEXT(Int i0, Int i1) */
+
+METHOD GL_glBindRenderbufferEXT(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glBindRenderbufferEXT(i0 ,i1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glBindFramebufferEXT(Int i0, Int i1) */
+
+METHOD GL_glBindFramebufferEXT(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glBindFramebufferEXT(i0 ,i1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* Int GL.glCheckFramebufferStatusEXT(Int i0) */
+
+METHOD GL_glCheckFramebufferStatusEXT(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int ret = glCheckFramebufferStatusEXT(i0 );
+
+	KNH_RETURN_Int(ctx, sfp, ret);
+}
+
+/* void GL.glFramebufferTexture1DEXT(Int i0, Int i1, Int i2, Int i3, Int i4) */
+
+METHOD GL_glFramebufferTexture1DEXT(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	int i3 = p_int(sfp[4]);
+	int i4 = p_int(sfp[5]);
+	glFramebufferTexture1DEXT(i0 ,i1 ,i2 ,i3 ,i4 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glFramebufferTexture2DEXT(Int i0, Int i1, Int i2, Int i3, Int i4) */
+
+METHOD GL_glFramebufferTexture2DEXT(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	int i3 = p_int(sfp[4]);
+	int i4 = p_int(sfp[5]);
+	glFramebufferTexture2DEXT(i0 ,i1 ,i2 ,i3 ,i4 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glFramebufferTexture3DEXT(Int i0, Int i1, Int i2, Int i3, Int i4, Int i5) */
+
+METHOD GL_glFramebufferTexture3DEXT(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	int i3 = p_int(sfp[4]);
+	int i4 = p_int(sfp[5]);
+	int i5 = p_int(sfp[6]);
+	glFramebufferTexture3DEXT(i0 ,i1 ,i2 ,i3 ,i4 ,i5 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glFramebufferRenderbufferEXT(Int i0, Int i1, Int i2, Int i3) */
+
+METHOD GL_glFramebufferRenderbufferEXT(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	int i3 = p_int(sfp[4]);
+	glFramebufferRenderbufferEXT(i0 ,i1 ,i2 ,i3 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glGenerateMipmapEXT(Int i0) */
+
+METHOD GL_glGenerateMipmapEXT(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	glGenerateMipmapEXT(i0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glProgramParameteriEXT(Int i0, Int i1, Int i2) */
+
+METHOD GL_glProgramParameteriEXT(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	glProgramParameteriEXT(i0 ,i1 ,i2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glFramebufferTextureEXT(Int i0, Int i1, Int i2, Int i3) */
+
+METHOD GL_glFramebufferTextureEXT(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	int i3 = p_int(sfp[4]);
+	glFramebufferTextureEXT(i0 ,i1 ,i2 ,i3 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glFramebufferTextureLayerEXT(Int i0, Int i1, Int i2, Int i3, Int i4) */
+
+METHOD GL_glFramebufferTextureLayerEXT(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	int i3 = p_int(sfp[4]);
+	int i4 = p_int(sfp[5]);
+	glFramebufferTextureLayerEXT(i0 ,i1 ,i2 ,i3 ,i4 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glFramebufferTextureFaceEXT(Int i0, Int i1, Int i2, Int i3, Int i4) */
+
+METHOD GL_glFramebufferTextureFaceEXT(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	int i3 = p_int(sfp[4]);
+	int i4 = p_int(sfp[5]);
+	glFramebufferTextureFaceEXT(i0 ,i1 ,i2 ,i3 ,i4 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glBindBufferRangeEXT(Int i0, Int i1, Int i2, Int i3, Int i4) */
+
+METHOD GL_glBindBufferRangeEXT(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	int i3 = p_int(sfp[4]);
+	int i4 = p_int(sfp[5]);
+	glBindBufferRangeEXT(i0 ,i1 ,i2 ,i3 ,i4 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glBindBufferOffsetEXT(Int i0, Int i1, Int i2, Int i3) */
+
+METHOD GL_glBindBufferOffsetEXT(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	int i3 = p_int(sfp[4]);
+	glBindBufferOffsetEXT(i0 ,i1 ,i2 ,i3 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glBindBufferBaseEXT(Int i0, Int i1, Int i2) */
+
+METHOD GL_glBindBufferBaseEXT(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	glBindBufferBaseEXT(i0 ,i1 ,i2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glBeginTransformFeedbackEXT(Int i0) */
+
+METHOD GL_glBeginTransformFeedbackEXT(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	glBeginTransformFeedbackEXT(i0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
 /* void GL.glEndTransformFeedbackEXT() */
 
 METHOD GL_glEndTransformFeedbackEXT(Ctx *ctx, knh_sfp_t* sfp)
@@ -491,6 +1092,17 @@ METHOD GL_glGetUniformBufferSizeEXT(Ctx *ctx, knh_sfp_t* sfp)
 	int i0 = p_int(sfp[1]);
 	int i1 = p_int(sfp[2]);
 	int ret = glGetUniformBufferSizeEXT(i0 ,i1 );
+
+	KNH_RETURN_Int(ctx, sfp, ret);
+}
+
+/* Int GL.glGetUniformOffsetEXT(Int i0, Int i1) */
+
+METHOD GL_glGetUniformOffsetEXT(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int ret = glGetUniformOffsetEXT(i0 ,i1 );
 
 	KNH_RETURN_Int(ctx, sfp, ret);
 }
@@ -671,14 +1283,13 @@ METHOD GL_glUniform4uiEXT(Ctx *ctx, knh_sfp_t* sfp)
 	KNH_RETURN_void(ctx, sfp);
 }
 
-/* void GL.glGetUniformuivEXT(Int i0, Int i1, Int i2) */
+/* void GL.glVertexArrayParameteriAPPLE(Int i0, Int i1) */
 
-METHOD GL_glGetUniformuivEXT(Ctx *ctx, knh_sfp_t* sfp)
+METHOD GL_glVertexArrayParameteriAPPLE(Ctx *ctx, knh_sfp_t* sfp)
 {
 	int i0 = p_int(sfp[1]);
 	int i1 = p_int(sfp[2]);
-	int i2 = p_int(sfp[3]);
-	glGetUniformuivEXT(i0 ,i1 ,i2 );
+	glVertexArrayParameteriAPPLE(i0 ,i1 );
 
 	KNH_RETURN_void(ctx, sfp);
 }
@@ -713,6 +1324,17 @@ METHOD GL_glFinishFenceAPPLE(Ctx *ctx, knh_sfp_t* sfp)
 	KNH_RETURN_void(ctx, sfp);
 }
 
+/* void GL.glFinishObjectAPPLE(Int i0, Int i1) */
+
+METHOD GL_glFinishObjectAPPLE(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glFinishObjectAPPLE(i0 ,i1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
 /* void GL.glFlushRenderAPPLE() */
 
 METHOD GL_glFlushRenderAPPLE(Ctx *ctx, knh_sfp_t* sfp)
@@ -740,12 +1362,312 @@ METHOD GL_glSwapAPPLE(Ctx *ctx, knh_sfp_t* sfp)
 	KNH_RETURN_void(ctx, sfp);
 }
 
+/* void GL.glEnableVertexAttribAPPLE(Int i0, Int i1) */
+
+METHOD GL_glEnableVertexAttribAPPLE(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glEnableVertexAttribAPPLE(i0 ,i1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glDisableVertexAttribAPPLE(Int i0, Int i1) */
+
+METHOD GL_glDisableVertexAttribAPPLE(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glDisableVertexAttribAPPLE(i0 ,i1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glBufferParameteriAPPLE(Int i0, Int i1, Int i2) */
+
+METHOD GL_glBufferParameteriAPPLE(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	glBufferParameteriAPPLE(i0 ,i1 ,i2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glFlushMappedBufferRangeAPPLE(Int i0, Int i1, Int i2) */
+
+METHOD GL_glFlushMappedBufferRangeAPPLE(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	glFlushMappedBufferRangeAPPLE(i0 ,i1 ,i2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* Int GL.glObjectPurgeableAPPLE(Int i0, Int i1, Int i2) */
+
+METHOD GL_glObjectPurgeableAPPLE(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	int ret = glObjectPurgeableAPPLE(i0 ,i1 ,i2 );
+
+	KNH_RETURN_Int(ctx, sfp, ret);
+}
+
+/* Int GL.glObjectUnpurgeableAPPLE(Int i0, Int i1, Int i2) */
+
+METHOD GL_glObjectUnpurgeableAPPLE(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	int ret = glObjectUnpurgeableAPPLE(i0 ,i1 ,i2 );
+
+	KNH_RETURN_Int(ctx, sfp, ret);
+}
+
+/* void GL.glPNTrianglesiATI(Int i0, Int i1) */
+
+METHOD GL_glPNTrianglesiATI(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glPNTrianglesiATI(i0 ,i1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glPNTrianglesfATI(Int i0, Float f1) */
+
+METHOD GL_glPNTrianglesfATI(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	float f1 = p_float(sfp[2]);
+	glPNTrianglesfATI(i0 ,f1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glBlendEquationSeparateATI(Int i0, Int i1) */
+
+METHOD GL_glBlendEquationSeparateATI(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glBlendEquationSeparateATI(i0 ,i1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glStencilOpSeparateATI(Int i0, Int i1, Int i2, Int i3) */
+
+METHOD GL_glStencilOpSeparateATI(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	int i3 = p_int(sfp[4]);
+	glStencilOpSeparateATI(i0 ,i1 ,i2 ,i3 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glStencilFuncSeparateATI(Int i0, Int i1, Int i2, Int i3) */
+
+METHOD GL_glStencilFuncSeparateATI(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	int i3 = p_int(sfp[4]);
+	glStencilFuncSeparateATI(i0 ,i1 ,i2 ,i3 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glPNTrianglesiATIX(Int i0, Int i1) */
+
+METHOD GL_glPNTrianglesiATIX(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glPNTrianglesiATIX(i0 ,i1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glPNTrianglesfATIX(Int i0, Float f1) */
+
+METHOD GL_glPNTrianglesfATIX(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	float f1 = p_float(sfp[2]);
+	glPNTrianglesfATIX(i0 ,f1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glCombinerParameterfNV(Int i0, Float f1) */
+
+METHOD GL_glCombinerParameterfNV(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	float f1 = p_float(sfp[2]);
+	glCombinerParameterfNV(i0 ,f1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glCombinerParameteriNV(Int i0, Int i1) */
+
+METHOD GL_glCombinerParameteriNV(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glCombinerParameteriNV(i0 ,i1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glCombinerInputNV(Int i0, Int i1, Int i2, Int i3, Int i4, Int i5) */
+
+METHOD GL_glCombinerInputNV(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	int i3 = p_int(sfp[4]);
+	int i4 = p_int(sfp[5]);
+	int i5 = p_int(sfp[6]);
+	glCombinerInputNV(i0 ,i1 ,i2 ,i3 ,i4 ,i5 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glFinalCombinerInputNV(Int i0, Int i1, Int i2, Int i3) */
+
+METHOD GL_glFinalCombinerInputNV(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	int i3 = p_int(sfp[4]);
+	glFinalCombinerInputNV(i0 ,i1 ,i2 ,i3 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glPointParameteriNV(Int i0, Int i1) */
+
+METHOD GL_glPointParameteriNV(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glPointParameteriNV(i0 ,i1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glAccum(Int i0, Float f1) */
+
+METHOD GL_glAccum(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	float f1 = p_float(sfp[2]);
+	glAccum(i0 ,f1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glAlphaFunc(Int i0, Float f1) */
+
+METHOD GL_glAlphaFunc(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	float f1 = p_float(sfp[2]);
+	glAlphaFunc(i0 ,f1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
 /* void GL.glArrayElement(Int i0) */
 
 METHOD GL_glArrayElement(Ctx *ctx, knh_sfp_t* sfp)
 {
 	int i0 = p_int(sfp[1]);
 	glArrayElement(i0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glBegin(Int i0) */
+
+METHOD GL_glBegin(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	glBegin(i0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glBindTexture(Int i0, Int i1) */
+
+METHOD GL_glBindTexture(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glBindTexture(i0 ,i1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glBlendColor(Float f0, Float f1, Float f2, Float f3) */
+
+METHOD GL_glBlendColor(Ctx *ctx, knh_sfp_t* sfp)
+{
+	float f0 = p_float(sfp[1]);
+	float f1 = p_float(sfp[2]);
+	float f2 = p_float(sfp[3]);
+	float f3 = p_float(sfp[4]);
+	glBlendColor(f0 ,f1 ,f2 ,f3 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glBlendEquation(Int i0) */
+
+METHOD GL_glBlendEquation(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	glBlendEquation(i0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glBlendEquationSeparate(Int i0, Int i1) */
+
+METHOD GL_glBlendEquationSeparate(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glBlendEquationSeparate(i0 ,i1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glBlendFunc(Int i0, Int i1) */
+
+METHOD GL_glBlendFunc(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glBlendFunc(i0 ,i1 );
 
 	KNH_RETURN_void(ctx, sfp);
 }
@@ -769,6 +1691,19 @@ METHOD GL_glClearAccum(Ctx *ctx, knh_sfp_t* sfp)
 	float f2 = p_float(sfp[3]);
 	float f3 = p_float(sfp[4]);
 	glClearAccum(f0 ,f1 ,f2 ,f3 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glClearColor(Float f0, Float f1, Float f2, Float f3) */
+
+METHOD GL_glClearColor(Ctx *ctx, knh_sfp_t* sfp)
+{
+	float f0 = p_float(sfp[1]);
+	float f1 = p_float(sfp[2]);
+	float f2 = p_float(sfp[3]);
+	float f3 = p_float(sfp[4]);
+	glClearColor(f0 ,f1 ,f2 ,f3 );
 
 	KNH_RETURN_void(ctx, sfp);
 }
@@ -918,6 +1853,111 @@ METHOD GL_glColor4ui(Ctx *ctx, knh_sfp_t* sfp)
 	KNH_RETURN_void(ctx, sfp);
 }
 
+/* void GL.glColorMaterial(Int i0, Int i1) */
+
+METHOD GL_glColorMaterial(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glColorMaterial(i0 ,i1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glConvolutionParameterf(Int i0, Int i1, Float f2) */
+
+METHOD GL_glConvolutionParameterf(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	float f2 = p_float(sfp[3]);
+	glConvolutionParameterf(i0 ,i1 ,f2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glConvolutionParameteri(Int i0, Int i1, Int i2) */
+
+METHOD GL_glConvolutionParameteri(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	glConvolutionParameteri(i0 ,i1 ,i2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glCullFace(Int i0) */
+
+METHOD GL_glCullFace(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	glCullFace(i0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glDepthFunc(Int i0) */
+
+METHOD GL_glDepthFunc(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	glDepthFunc(i0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glDisable(Int i0) */
+
+METHOD GL_glDisable(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	glDisable(i0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glDisableClientState(Int i0) */
+
+METHOD GL_glDisableClientState(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	glDisableClientState(i0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glDrawBuffer(Int i0) */
+
+METHOD GL_glDrawBuffer(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	glDrawBuffer(i0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glEnable(Int i0) */
+
+METHOD GL_glEnable(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	glEnable(i0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glEnableClientState(Int i0) */
+
+METHOD GL_glEnableClientState(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	glEnableClientState(i0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
 /* void GL.glEnd() */
 
 METHOD GL_glEnd(Ctx *ctx, knh_sfp_t* sfp)
@@ -978,6 +2018,32 @@ METHOD GL_glEvalCoord2f(Ctx *ctx, knh_sfp_t* sfp)
 	KNH_RETURN_void(ctx, sfp);
 }
 
+/* void GL.glEvalMesh1(Int i0, Int i1, Int i2) */
+
+METHOD GL_glEvalMesh1(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	glEvalMesh1(i0 ,i1 ,i2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glEvalMesh2(Int i0, Int i1, Int i2, Int i3, Int i4) */
+
+METHOD GL_glEvalMesh2(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	int i3 = p_int(sfp[4]);
+	int i4 = p_int(sfp[5]);
+	glEvalMesh2(i0 ,i1 ,i2 ,i3 ,i4 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
 /* void GL.glEvalPoint1(Int i0) */
 
 METHOD GL_glEvalPoint1(Ctx *ctx, knh_sfp_t* sfp)
@@ -1017,6 +2083,38 @@ METHOD GL_glFlush(Ctx *ctx, knh_sfp_t* sfp)
 	KNH_RETURN_void(ctx, sfp);
 }
 
+/* void GL.glFogf(Int i0, Float f1) */
+
+METHOD GL_glFogf(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	float f1 = p_float(sfp[2]);
+	glFogf(i0 ,f1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glFogi(Int i0, Int i1) */
+
+METHOD GL_glFogi(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glFogi(i0 ,i1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glFrontFace(Int i0) */
+
+METHOD GL_glFrontFace(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	glFrontFace(i0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
 /* void GL.glFrustum(Float f0, Float f1, Float f2, Float f3, Float f4, Float f5) */
 
 METHOD GL_glFrustum(Ctx *ctx, knh_sfp_t* sfp)
@@ -1028,6 +2126,26 @@ METHOD GL_glFrustum(Ctx *ctx, knh_sfp_t* sfp)
 	float f4 = p_float(sfp[5]);
 	float f5 = p_float(sfp[6]);
 	glFrustum(f0 ,f1 ,f2 ,f3 ,f4 ,f5 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* Int GL.glGetError() */
+
+METHOD GL_glGetError(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int ret = glGetError();
+
+	KNH_RETURN_Int(ctx, sfp, ret);
+}
+
+/* void GL.glHint(Int i0, Int i1) */
+
+METHOD GL_glHint(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glHint(i0 ,i1 );
 
 	KNH_RETURN_void(ctx, sfp);
 }
@@ -1091,6 +2209,52 @@ METHOD GL_glInitNames(Ctx *ctx, knh_sfp_t* sfp)
 	KNH_RETURN_void(ctx, sfp);
 }
 
+/* void GL.glLightModelf(Int i0, Float f1) */
+
+METHOD GL_glLightModelf(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	float f1 = p_float(sfp[2]);
+	glLightModelf(i0 ,f1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glLightModeli(Int i0, Int i1) */
+
+METHOD GL_glLightModeli(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glLightModeli(i0 ,i1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glLightf(Int i0, Int i1, Float f2) */
+
+METHOD GL_glLightf(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	float f2 = p_float(sfp[3]);
+	glLightf(i0 ,i1 ,f2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glLighti(Int i0, Int i1, Int i2) */
+
+METHOD GL_glLighti(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	glLighti(i0 ,i1 ,i2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
 /* void GL.glLineWidth(Float f0) */
 
 METHOD GL_glLineWidth(Ctx *ctx, knh_sfp_t* sfp)
@@ -1126,6 +2290,16 @@ METHOD GL_glLoadName(Ctx *ctx, knh_sfp_t* sfp)
 {
 	int i0 = p_int(sfp[1]);
 	glLoadName(i0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glLogicOp(Int i0) */
+
+METHOD GL_glLogicOp(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	glLogicOp(i0 );
 
 	KNH_RETURN_void(ctx, sfp);
 }
@@ -1180,6 +2354,51 @@ METHOD GL_glMapGrid2f(Ctx *ctx, knh_sfp_t* sfp)
 	float f4 = p_float(sfp[5]);
 	float f5 = p_float(sfp[6]);
 	glMapGrid2f(i0 ,f1 ,f2 ,i3 ,f4 ,f5 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMaterialf(Int i0, Int i1, Float f2) */
+
+METHOD GL_glMaterialf(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	float f2 = p_float(sfp[3]);
+	glMaterialf(i0 ,i1 ,f2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMateriali(Int i0, Int i1, Int i2) */
+
+METHOD GL_glMateriali(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	glMateriali(i0 ,i1 ,i2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMatrixMode(Int i0) */
+
+METHOD GL_glMatrixMode(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	glMatrixMode(i0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glNewList(Int i0, Int i1) */
+
+METHOD GL_glNewList(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glNewList(i0 ,i1 );
 
 	KNH_RETURN_void(ctx, sfp);
 }
@@ -1257,6 +2476,50 @@ METHOD GL_glPassThrough(Ctx *ctx, knh_sfp_t* sfp)
 	KNH_RETURN_void(ctx, sfp);
 }
 
+/* void GL.glPixelStoref(Int i0, Float f1) */
+
+METHOD GL_glPixelStoref(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	float f1 = p_float(sfp[2]);
+	glPixelStoref(i0 ,f1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glPixelStorei(Int i0, Int i1) */
+
+METHOD GL_glPixelStorei(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glPixelStorei(i0 ,i1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glPixelTransferf(Int i0, Float f1) */
+
+METHOD GL_glPixelTransferf(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	float f1 = p_float(sfp[2]);
+	glPixelTransferf(i0 ,f1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glPixelTransferi(Int i0, Int i1) */
+
+METHOD GL_glPixelTransferi(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glPixelTransferi(i0 ,i1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
 /* void GL.glPixelZoom(Float f0, Float f1) */
 
 METHOD GL_glPixelZoom(Ctx *ctx, knh_sfp_t* sfp)
@@ -1274,6 +2537,17 @@ METHOD GL_glPointSize(Ctx *ctx, knh_sfp_t* sfp)
 {
 	float f0 = p_float(sfp[1]);
 	glPointSize(f0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glPolygonMode(Int i0, Int i1) */
+
+METHOD GL_glPolygonMode(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glPolygonMode(i0 ,i1 );
 
 	KNH_RETURN_void(ctx, sfp);
 }
@@ -1488,6 +2762,16 @@ METHOD GL_glRasterPos4s(Ctx *ctx, knh_sfp_t* sfp)
 	KNH_RETURN_void(ctx, sfp);
 }
 
+/* void GL.glReadBuffer(Int i0) */
+
+METHOD GL_glReadBuffer(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	glReadBuffer(i0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
 /* void GL.glRectd(Float f0, Float f1, Float f2, Float f3) */
 
 METHOD GL_glRectd(Ctx *ctx, knh_sfp_t* sfp)
@@ -1536,6 +2820,36 @@ METHOD GL_glRects(Ctx *ctx, knh_sfp_t* sfp)
 	int i2 = p_int(sfp[3]);
 	int i3 = p_int(sfp[4]);
 	glRects(i0 ,i1 ,i2 ,i3 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* Int GL.glRenderMode(Int i0) */
+
+METHOD GL_glRenderMode(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int ret = glRenderMode(i0 );
+
+	KNH_RETURN_Int(ctx, sfp, ret);
+}
+
+/* void GL.glResetHistogram(Int i0) */
+
+METHOD GL_glResetHistogram(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	glResetHistogram(i0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glResetMinmax(Int i0) */
+
+METHOD GL_glResetMinmax(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	glResetMinmax(i0 );
 
 	KNH_RETURN_void(ctx, sfp);
 }
@@ -1590,12 +2904,46 @@ METHOD GL_glScalef(Ctx *ctx, knh_sfp_t* sfp)
 	KNH_RETURN_void(ctx, sfp);
 }
 
+/* void GL.glShadeModel(Int i0) */
+
+METHOD GL_glShadeModel(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	glShadeModel(i0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glStencilFunc(Int i0, Int i1, Int i2) */
+
+METHOD GL_glStencilFunc(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	glStencilFunc(i0 ,i1 ,i2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
 /* void GL.glStencilMask(Int i0) */
 
 METHOD GL_glStencilMask(Ctx *ctx, knh_sfp_t* sfp)
 {
 	int i0 = p_int(sfp[1]);
 	glStencilMask(i0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glStencilOp(Int i0, Int i1, Int i2) */
+
+METHOD GL_glStencilOp(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	glStencilOp(i0 ,i1 ,i2 );
 
 	KNH_RETURN_void(ctx, sfp);
 }
@@ -1784,6 +3132,90 @@ METHOD GL_glTexCoord4s(Ctx *ctx, knh_sfp_t* sfp)
 	KNH_RETURN_void(ctx, sfp);
 }
 
+/* void GL.glTexEnvf(Int i0, Int i1, Float f2) */
+
+METHOD GL_glTexEnvf(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	float f2 = p_float(sfp[3]);
+	glTexEnvf(i0 ,i1 ,f2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glTexEnvi(Int i0, Int i1, Int i2) */
+
+METHOD GL_glTexEnvi(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	glTexEnvi(i0 ,i1 ,i2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glTexGend(Int i0, Int i1, Float f2) */
+
+METHOD GL_glTexGend(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	float f2 = p_float(sfp[3]);
+	glTexGend(i0 ,i1 ,f2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glTexGenf(Int i0, Int i1, Float f2) */
+
+METHOD GL_glTexGenf(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	float f2 = p_float(sfp[3]);
+	glTexGenf(i0 ,i1 ,f2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glTexGeni(Int i0, Int i1, Int i2) */
+
+METHOD GL_glTexGeni(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	glTexGeni(i0 ,i1 ,i2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glTexParameterf(Int i0, Int i1, Float f2) */
+
+METHOD GL_glTexParameterf(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	float f2 = p_float(sfp[3]);
+	glTexParameterf(i0 ,i1 ,f2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glTexParameteri(Int i0, Int i1, Int i2) */
+
+METHOD GL_glTexParameteri(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	glTexParameteri(i0 ,i1 ,i2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
 /* void GL.glTranslated(Float f0, Float f1, Float f2) */
 
 METHOD GL_glTranslated(Ctx *ctx, knh_sfp_t* sfp)
@@ -1864,7 +3296,17 @@ METHOD GL_glVertex3d(Ctx *ctx, knh_sfp_t* sfp)
 	KNH_RETURN_void(ctx, sfp);
 }
 
+/* void GL.glVertex3f(Float f0, Float f1, Float f2) */
 
+METHOD GL_glVertex3f(Ctx *ctx, knh_sfp_t* sfp)
+{
+	float f0 = p_float(sfp[1]);
+	float f1 = p_float(sfp[2]);
+	float f2 = p_float(sfp[3]);
+	glVertex3f(f0 ,f1 ,f2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
 
 /* void GL.glVertex3i(Int i0, Int i1, Int i2) */
 
@@ -1938,6 +3380,236 @@ METHOD GL_glVertex4s(Ctx *ctx, knh_sfp_t* sfp)
 	int i2 = p_int(sfp[3]);
 	int i3 = p_int(sfp[4]);
 	glVertex4s(i0 ,i1 ,i2 ,i3 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glSamplePass(Int i0) */
+
+METHOD GL_glSamplePass(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	glSamplePass(i0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glActiveTexture(Int i0) */
+
+METHOD GL_glActiveTexture(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	glActiveTexture(i0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glClientActiveTexture(Int i0) */
+
+METHOD GL_glClientActiveTexture(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	glClientActiveTexture(i0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord1d(Int i0, Float f1) */
+
+METHOD GL_glMultiTexCoord1d(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	float f1 = p_float(sfp[2]);
+	glMultiTexCoord1d(i0 ,f1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord1f(Int i0, Float f1) */
+
+METHOD GL_glMultiTexCoord1f(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	float f1 = p_float(sfp[2]);
+	glMultiTexCoord1f(i0 ,f1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord1i(Int i0, Int i1) */
+
+METHOD GL_glMultiTexCoord1i(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glMultiTexCoord1i(i0 ,i1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord1s(Int i0, Int i1) */
+
+METHOD GL_glMultiTexCoord1s(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glMultiTexCoord1s(i0 ,i1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord2d(Int i0, Float f1, Float f2) */
+
+METHOD GL_glMultiTexCoord2d(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	float f1 = p_float(sfp[2]);
+	float f2 = p_float(sfp[3]);
+	glMultiTexCoord2d(i0 ,f1 ,f2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord2f(Int i0, Float f1, Float f2) */
+
+METHOD GL_glMultiTexCoord2f(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	float f1 = p_float(sfp[2]);
+	float f2 = p_float(sfp[3]);
+	glMultiTexCoord2f(i0 ,f1 ,f2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord2i(Int i0, Int i1, Int i2) */
+
+METHOD GL_glMultiTexCoord2i(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	glMultiTexCoord2i(i0 ,i1 ,i2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord2s(Int i0, Int i1, Int i2) */
+
+METHOD GL_glMultiTexCoord2s(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	glMultiTexCoord2s(i0 ,i1 ,i2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord3d(Int i0, Float f1, Float f2, Float f3) */
+
+METHOD GL_glMultiTexCoord3d(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	float f1 = p_float(sfp[2]);
+	float f2 = p_float(sfp[3]);
+	float f3 = p_float(sfp[4]);
+	glMultiTexCoord3d(i0 ,f1 ,f2 ,f3 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord3f(Int i0, Float f1, Float f2, Float f3) */
+
+METHOD GL_glMultiTexCoord3f(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	float f1 = p_float(sfp[2]);
+	float f2 = p_float(sfp[3]);
+	float f3 = p_float(sfp[4]);
+	glMultiTexCoord3f(i0 ,f1 ,f2 ,f3 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord3i(Int i0, Int i1, Int i2, Int i3) */
+
+METHOD GL_glMultiTexCoord3i(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	int i3 = p_int(sfp[4]);
+	glMultiTexCoord3i(i0 ,i1 ,i2 ,i3 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord3s(Int i0, Int i1, Int i2, Int i3) */
+
+METHOD GL_glMultiTexCoord3s(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	int i3 = p_int(sfp[4]);
+	glMultiTexCoord3s(i0 ,i1 ,i2 ,i3 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord4d(Int i0, Float f1, Float f2, Float f3, Float f4) */
+
+METHOD GL_glMultiTexCoord4d(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	float f1 = p_float(sfp[2]);
+	float f2 = p_float(sfp[3]);
+	float f3 = p_float(sfp[4]);
+	float f4 = p_float(sfp[5]);
+	glMultiTexCoord4d(i0 ,f1 ,f2 ,f3 ,f4 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord4f(Int i0, Float f1, Float f2, Float f3, Float f4) */
+
+METHOD GL_glMultiTexCoord4f(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	float f1 = p_float(sfp[2]);
+	float f2 = p_float(sfp[3]);
+	float f3 = p_float(sfp[4]);
+	float f4 = p_float(sfp[5]);
+	glMultiTexCoord4f(i0 ,f1 ,f2 ,f3 ,f4 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord4i(Int i0, Int i1, Int i2, Int i3, Int i4) */
+
+METHOD GL_glMultiTexCoord4i(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	int i3 = p_int(sfp[4]);
+	int i4 = p_int(sfp[5]);
+	glMultiTexCoord4i(i0 ,i1 ,i2 ,i3 ,i4 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glMultiTexCoord4s(Int i0, Int i1, Int i2, Int i3, Int i4) */
+
+METHOD GL_glMultiTexCoord4s(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	int i3 = p_int(sfp[4]);
+	int i4 = p_int(sfp[5]);
+	glMultiTexCoord4s(i0 ,i1 ,i2 ,i3 ,i4 );
 
 	KNH_RETURN_void(ctx, sfp);
 }
@@ -2018,6 +3690,41 @@ METHOD GL_glSecondaryColor3ui(Ctx *ctx, knh_sfp_t* sfp)
 	int i1 = p_int(sfp[2]);
 	int i2 = p_int(sfp[3]);
 	glSecondaryColor3ui(i0 ,i1 ,i2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glPointParameterf(Int i0, Float f1) */
+
+METHOD GL_glPointParameterf(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	float f1 = p_float(sfp[2]);
+	glPointParameterf(i0 ,f1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glPointParameteri(Int i0, Int i1) */
+
+METHOD GL_glPointParameteri(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glPointParameteri(i0 ,i1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glBlendFuncSeparate(Int i0, Int i1, Int i2, Int i3) */
+
+METHOD GL_glBlendFuncSeparate(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	int i3 = p_int(sfp[4]);
+	glBlendFuncSeparate(i0 ,i1 ,i2 ,i3 );
 
 	KNH_RETURN_void(ctx, sfp);
 }
@@ -2110,6 +3817,38 @@ METHOD GL_glWindowPos3s(Ctx *ctx, knh_sfp_t* sfp)
 	int i1 = p_int(sfp[2]);
 	int i2 = p_int(sfp[3]);
 	glWindowPos3s(i0 ,i1 ,i2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glBeginQuery(Int i0, Int i1) */
+
+METHOD GL_glBeginQuery(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glBeginQuery(i0 ,i1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glEndQuery(Int i0) */
+
+METHOD GL_glEndQuery(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	glEndQuery(i0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glBindBuffer(Int i0, Int i1) */
+
+METHOD GL_glBindBuffer(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glBindBuffer(i0 ,i1 );
 
 	KNH_RETURN_void(ctx, sfp);
 }
@@ -2305,6 +4044,16 @@ METHOD GL_glDetachShader(Ctx *ctx, knh_sfp_t* sfp)
 	KNH_RETURN_void(ctx, sfp);
 }
 
+/* Int GL.glCreateShader(Int i0) */
+
+METHOD GL_glCreateShader(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int ret = glCreateShader(i0 );
+
+	KNH_RETURN_Int(ctx, sfp, ret);
+}
+
 /* void GL.glCompileShader(Int i0) */
 
 METHOD GL_glCompileShader(Ctx *ctx, knh_sfp_t* sfp)
@@ -2475,26 +4224,39 @@ METHOD GL_glUniform4i(Ctx *ctx, knh_sfp_t* sfp)
 	KNH_RETURN_void(ctx, sfp);
 }
 
-/* void GL.glGetUniformfv(Int i0, Int i1, Float f2) */
+/* void GL.glStencilFuncSeparate(Int i0, Int i1, Int i2, Int i3) */
 
-METHOD GL_glGetUniformfv(Ctx *ctx, knh_sfp_t* sfp)
-{
-	int i0 = p_int(sfp[1]);
-	int i1 = p_int(sfp[2]);
-	float f2 = p_float(sfp[3]);
-	glGetUniformfv(i0 ,i1 ,f2 );
-
-	KNH_RETURN_void(ctx, sfp);
-}
-
-/* void GL.glGetUniformiv(Int i0, Int i1, Int i2) */
-
-METHOD GL_glGetUniformiv(Ctx *ctx, knh_sfp_t* sfp)
+METHOD GL_glStencilFuncSeparate(Ctx *ctx, knh_sfp_t* sfp)
 {
 	int i0 = p_int(sfp[1]);
 	int i1 = p_int(sfp[2]);
 	int i2 = p_int(sfp[3]);
-	glGetUniformiv(i0 ,i1 ,i2 );
+	int i3 = p_int(sfp[4]);
+	glStencilFuncSeparate(i0 ,i1 ,i2 ,i3 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glStencilOpSeparate(Int i0, Int i1, Int i2, Int i3) */
+
+METHOD GL_glStencilOpSeparate(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	int i3 = p_int(sfp[4]);
+	glStencilOpSeparate(i0 ,i1 ,i2 ,i3 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glStencilMaskSeparate(Int i0, Int i1) */
+
+METHOD GL_glStencilMaskSeparate(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glStencilMaskSeparate(i0 ,i1 );
 
 	KNH_RETURN_void(ctx, sfp);
 }
@@ -2543,16 +4305,22 @@ METHOD GL_gluPerspective(Ctx *ctx, knh_sfp_t* sfp)
 	KNH_RETURN_void(ctx, sfp);
 }
 
-/* void GL.gluPickMatrix(Float f0, Float f1, Float f2, Float f3, Int i4) */
+/* void GL.glutInitDisplayMode(Int i0) */
 
-METHOD GL_gluPickMatrix(Ctx *ctx, knh_sfp_t* sfp)
+METHOD GL_glutInitDisplayMode(Ctx *ctx, knh_sfp_t* sfp)
 {
-	float f0 = p_float(sfp[1]);
-	float f1 = p_float(sfp[2]);
-	float f2 = p_float(sfp[3]);
-	float f3 = p_float(sfp[4]);
-	int i4 = p_int(sfp[5]);
-	gluPickMatrix(f0 ,f1 ,f2 ,f3 ,i4 );
+	int i0 = p_int(sfp[1]);
+	glutInitDisplayMode(i0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glutInitDisplayString(String s0) */
+
+METHOD GL_glutInitDisplayString(Ctx *ctx, knh_sfp_t* sfp)
+{
+	char *s0 = p_char(sfp[1]);
+	glutInitDisplayString(s0 );
 
 	KNH_RETURN_void(ctx, sfp);
 }
@@ -2586,6 +4354,16 @@ METHOD GL_glutMainLoop(Ctx *ctx, knh_sfp_t* sfp)
 	glutMainLoop();
 
 	KNH_RETURN_void(ctx, sfp);
+}
+
+/* Int GL.glutCreateWindow(String s0) */
+
+METHOD GL_glutCreateWindow(Ctx *ctx, knh_sfp_t* sfp)
+{
+	char *s0 = p_char(sfp[1]);
+	int ret = glutCreateWindow(s0 );
+
+	KNH_RETURN_Int(ctx, sfp, ret);
 }
 
 /* Int GL.glutCreateSubWindow(Int i0, Int i1, Int i2, Int i3, Int i4) */
@@ -2655,6 +4433,26 @@ METHOD GL_glutSetWindow(Ctx *ctx, knh_sfp_t* sfp)
 {
 	int i0 = p_int(sfp[1]);
 	glutSetWindow(i0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glutSetWindowTitle(String s0) */
+
+METHOD GL_glutSetWindowTitle(Ctx *ctx, knh_sfp_t* sfp)
+{
+	char *s0 = p_char(sfp[1]);
+	glutSetWindowTitle(s0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glutSetIconTitle(String s0) */
+
+METHOD GL_glutSetIconTitle(Ctx *ctx, knh_sfp_t* sfp)
+{
+	char *s0 = p_char(sfp[1]);
+	glutSetIconTitle(s0 );
 
 	KNH_RETURN_void(ctx, sfp);
 }
@@ -2756,6 +4554,18 @@ METHOD GL_glutWarpPointer(Ctx *ctx, knh_sfp_t* sfp)
 	KNH_RETURN_void(ctx, sfp);
 }
 
+/* void GL.glutSurfaceTexture(Int i0, Int i1, Int i2) */
+
+METHOD GL_glutSurfaceTexture(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	glutSurfaceTexture(i0 ,i1 ,i2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
 /* void GL.glutCheckLoop() */
 
 METHOD GL_glutCheckLoop(Ctx *ctx, knh_sfp_t* sfp)
@@ -2779,6 +4589,16 @@ METHOD GL_glutEstablishOverlay(Ctx *ctx, knh_sfp_t* sfp)
 METHOD GL_glutRemoveOverlay(Ctx *ctx, knh_sfp_t* sfp)
 {
 	glutRemoveOverlay();
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glutUseLayer(Int i0) */
+
+METHOD GL_glutUseLayer(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	glutUseLayer(i0 );
 
 	KNH_RETURN_void(ctx, sfp);
 }
@@ -2849,6 +4669,52 @@ METHOD GL_glutSetMenu(Ctx *ctx, knh_sfp_t* sfp)
 	KNH_RETURN_void(ctx, sfp);
 }
 
+/* void GL.glutAddMenuEntry(String s0, Int i1) */
+
+METHOD GL_glutAddMenuEntry(Ctx *ctx, knh_sfp_t* sfp)
+{
+	char *s0 = p_char(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glutAddMenuEntry(s0 ,i1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glutAddSubMenu(String s0, Int i1) */
+
+METHOD GL_glutAddSubMenu(Ctx *ctx, knh_sfp_t* sfp)
+{
+	char *s0 = p_char(sfp[1]);
+	int i1 = p_int(sfp[2]);
+	glutAddSubMenu(s0 ,i1 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glutChangeToMenuEntry(Int i0, String s1, Int i2) */
+
+METHOD GL_glutChangeToMenuEntry(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	char *s1 = p_char(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	glutChangeToMenuEntry(i0 ,s1 ,i2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
+/* void GL.glutChangeToSubMenu(Int i0, String s1, Int i2) */
+
+METHOD GL_glutChangeToSubMenu(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	char *s1 = p_char(sfp[2]);
+	int i2 = p_int(sfp[3]);
+	glutChangeToSubMenu(i0 ,s1 ,i2 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
 /* void GL.glutRemoveMenuItem(Int i0) */
 
 METHOD GL_glutRemoveMenuItem(Ctx *ctx, knh_sfp_t* sfp)
@@ -2913,6 +4779,36 @@ METHOD GL_glutCopyColormap(Ctx *ctx, knh_sfp_t* sfp)
 	KNH_RETURN_void(ctx, sfp);
 }
 
+/* Int GL.glutGet(Int i0) */
+
+METHOD GL_glutGet(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int ret = glutGet(i0 );
+
+	KNH_RETURN_Int(ctx, sfp, ret);
+}
+
+/* Int GL.glutDeviceGet(Int i0) */
+
+METHOD GL_glutDeviceGet(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int ret = glutDeviceGet(i0 );
+
+	KNH_RETURN_Int(ctx, sfp, ret);
+}
+
+/* Int GL.glutExtensionSupported(String s0) */
+
+METHOD GL_glutExtensionSupported(Ctx *ctx, knh_sfp_t* sfp)
+{
+	char *s0 = p_char(sfp[1]);
+	int ret = glutExtensionSupported(s0 );
+
+	KNH_RETURN_Int(ctx, sfp, ret);
+}
+
 /* Int GL.glutGetModifiers() */
 
 METHOD GL_glutGetModifiers(Ctx *ctx, knh_sfp_t* sfp)
@@ -2922,42 +4818,12 @@ METHOD GL_glutGetModifiers(Ctx *ctx, knh_sfp_t* sfp)
 	KNH_RETURN_Int(ctx, sfp, ret);
 }
 
-/* void GL.glutBitmapCharacter(, Int i1) */
+/* Int GL.glutLayerGet(Int i0) */
 
-METHOD GL_glutBitmapCharacter(Ctx *ctx, knh_sfp_t* sfp)
+METHOD GL_glutLayerGet(Ctx *ctx, knh_sfp_t* sfp)
 {
-	int i1 = p_int(sfp[1]);
-	glutBitmapCharacter(i1 );
-
-	KNH_RETURN_void(ctx, sfp);
-}
-
-/* Int GL.glutBitmapWidth(, Int i1) */
-
-METHOD GL_glutBitmapWidth(Ctx *ctx, knh_sfp_t* sfp)
-{
-	int i1 = p_int(sfp[1]);
-	int ret = glutBitmapWidth(i1 );
-
-	KNH_RETURN_Int(ctx, sfp, ret);
-}
-
-/* void GL.glutStrokeCharacter(, Int i1) */
-
-METHOD GL_glutStrokeCharacter(Ctx *ctx, knh_sfp_t* sfp)
-{
-	int i1 = p_int(sfp[1]);
-	glutStrokeCharacter(i1 );
-
-	KNH_RETURN_void(ctx, sfp);
-}
-
-/* Int GL.glutStrokeWidth(, Int i1) */
-
-METHOD GL_glutStrokeWidth(Ctx *ctx, knh_sfp_t* sfp)
-{
-	int i1 = p_int(sfp[1]);
-	int ret = glutStrokeWidth(i1 );
+	int i0 = p_int(sfp[1]);
+	int ret = glutLayerGet(i0 );
 
 	KNH_RETURN_Int(ctx, sfp, ret);
 }
@@ -3150,6 +5016,16 @@ METHOD GL_glutSolidIcosahedron(Ctx *ctx, knh_sfp_t* sfp)
 	KNH_RETURN_void(ctx, sfp);
 }
 
+/* Int GL.glutVideoResizeGet(Int i0) */
+
+METHOD GL_glutVideoResizeGet(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int ret = glutVideoResizeGet(i0 );
+
+	KNH_RETURN_Int(ctx, sfp, ret);
+}
+
 /* void GL.glutSetupVideoResizing() */
 
 METHOD GL_glutSetupVideoResizing(Ctx *ctx, knh_sfp_t* sfp)
@@ -3232,6 +5108,16 @@ METHOD GL_glutForceJoystickFunc(Ctx *ctx, knh_sfp_t* sfp)
 	KNH_RETURN_void(ctx, sfp);
 }
 
+/* void GL.glutGameModeString(String s0) */
+
+METHOD GL_glutGameModeString(Ctx *ctx, knh_sfp_t* sfp)
+{
+	char *s0 = p_char(sfp[1]);
+	glutGameModeString(s0 );
+
+	KNH_RETURN_void(ctx, sfp);
+}
+
 /* Int GL.glutEnterGameMode() */
 
 METHOD GL_glutEnterGameMode(Ctx *ctx, knh_sfp_t* sfp)
@@ -3248,4 +5134,14 @@ METHOD GL_glutLeaveGameMode(Ctx *ctx, knh_sfp_t* sfp)
 	glutLeaveGameMode();
 
 	KNH_RETURN_void(ctx, sfp);
+}
+
+/* Int GL.glutGameModeGet(Int i0) */
+
+METHOD GL_glutGameModeGet(Ctx *ctx, knh_sfp_t* sfp)
+{
+	int i0 = p_int(sfp[1]);
+	int ret = glutGameModeGet(i0 );
+
+	KNH_RETURN_Int(ctx, sfp, ret);
 }
