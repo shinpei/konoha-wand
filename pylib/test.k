@@ -1,7 +1,6 @@
-class Test;
 class Sample;
 
-void Test.clearException(void);
-String Test.clearHello(void);
-void Test.clear();
+void String.test(int i, int j);
+void String.say(String str);
+void String bye(String str);
 

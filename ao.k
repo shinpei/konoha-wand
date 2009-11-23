@@ -1,7 +1,6 @@
 #!/usr/local/bin/konoha
 
 using math.*;
-using aobench.*;
 
 WIDTH = 256
 HEIGHT = 256
@@ -290,17 +289,13 @@ void setupScene()
   ((Sphere)spheres[1]).center.z = -3.0;
   ((Sphere)spheres[1]).radius = 0.5;  
 
-  
+  spheres[2] = new Sphere(); 
   ((Sphere)spheres[2]).center = new Vec();
   ((Sphere)spheres[2]).center.x = 1.0;
   ((Sphere)spheres[2]).center.y = 0.0;
   ((Sphere)spheres[2]).center.z = -2.2;
   ((Sphere)spheres[2]).radius = 0.5;
 
-  //  spheres[0].printing();
-  //spheres[1].printing();
-  //spheres[2].printing();
-  
   plane.position = new Vec();
   plane.position.x = 0.0;
   plane.position.y = -0.5;
@@ -315,16 +310,14 @@ void run()
   int[] img = new int[WIDTH * HEIGHT * 3];
   int i;
   setupScene();
-  //AOBench.open();
   render(img, WIDTH, HEIGHT, NSUBSAMPLES);
-  //AOBench.close();
   
   OutputStream out = new OutputStream("test2.ppm", "wb");
   out << "P6" << EOL;
   out << WIDTH << " " << HEIGHT << EOL;
   out << "255" << EOL;
-  for (i = 0; i<|img| < i++) {
-	out.putc(img[i]);
+  for (i = 0; i<|img| ; i++) {
+	out.putChar(img[i]);
   }
   out.close();
   
