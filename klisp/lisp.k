@@ -1,63 +1,65 @@
 class Cons {
-	Cons? car;
-	Cons? cdr;
+	Any? car;
+	Any? cdr;
 
 	Cons () {
 		car = null;
 		cdr = null;
 	}
 
-	@Virtual Any car () {
+	@Virtual Any? car () {
 		return car;
 	}
 
-	@Virtual Any cdr() {
+	@Virtual Any? cdr() {
 		return cdr;
 	}
 	
-	void printList() {
+	void printCons() {
 		/* print cons list structure whose root is this */
-		int count;
-		Cons? cur = car;
-		while (cur != null) {
-			cur = cur.cdr();
+		int count = 1;
+		Cons? current = this;
+
+		while (current.hasChild()) {
+			if (current instanceof Num) {
+				print current.car;
+			} else if (current instanceof Str) {
+				print current.car;
+			}
+			current = current.cdr;
 			count++;
 		}
-		OUT << %("there are %d{0} noes", count) << EOL;
+		OUT << count << EOL;
+	}
+
+	Boolean hasChild() {
+		return (cdr == null) ? false : true;
 	}
   
 }
 
 class Num extends Cons {
-	int _num; 
 	Num (int n = 0) {
-		num = n;   
+		_car  = n;
+		_cdr = null;
 	}
 
-	Any car () {
-		return num;
-	}
 }
 
 class Str extends Cons {
-	String _str;
 
 	Str (String s = "") {
-		_str = s;
-	}
-
-	Any car () {
-		return str;
+		car = s;
+		cdr = null;
 	}
 }
 
 void main (String[] args)
 {
-	a = new Cons();
-	a.car = new Num(3);
-	a.cdr = new Cons();
-	a.cdr.car = new Num(4);
-	a.cdr.cdr = new Cons();
-//	OUT <<  a.car() << EOL;
-	a.printList();
+	a = new Num(3);
+	a.cdr = new Num(4);
+    Cons? p = a.cdr;
+	p.cdr = new Num(5);
+//	p.cdr = new Str("hello");
+	a.printCons();
 }
