@@ -3,7 +3,7 @@ import os, fnmatch, sys
 import itertools
 import re
 
-classname = 'MagickWand'
+classname = 'ImageMagick'
 
 MAPPING = {
 "int": "Int",
@@ -12,7 +12,7 @@ MAPPING = {
 "long": "Int",
 "float": "Float",
 "double": "Float",
-"MagickWand *": "MagickWand",
+"MagickWand *": "ImageMagick",
 "MagickBooleanType": "Boolean",
 }
 

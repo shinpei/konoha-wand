@@ -1,5 +1,5 @@
 
-python ../pylib/gen_stub.py imagemagick.k
+python /gen_stub_imagemagick.py imagemagick.k
 mv stub_imagemagick.c imagemagick.c
 make clean
 make

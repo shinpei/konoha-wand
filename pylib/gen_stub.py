@@ -193,7 +193,7 @@ METHOD %s(Ctx *ctx, knh_sfp_t* sfp)
 """)
 output.writelines('''
 
-METHOD MagickWand_new(Ctx *ctx, knh_sfp_t* sfp)
+METHOD ImageMagick_new(Ctx *ctx, knh_sfp_t* sfp)
 {
   knh_Glue_t *glue = sfp[0].glue;
   MagickWandGenesis();
