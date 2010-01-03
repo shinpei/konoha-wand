@@ -1,0 +1,10 @@
+public class hObject {
+	int magic;
+	int flag;
+	int bcid;
+	int cid;
+	int ctxid;
+	/* lock  lock; */
+	int refc;
+
+}

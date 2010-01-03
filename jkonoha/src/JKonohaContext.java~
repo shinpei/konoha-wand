@@ -1,0 +1,8 @@
+public class JKonohaContext {
+	hObject h;
+	kObject[] unusedObject;
+	int unusedObjectSize;
+
+	
+
+}

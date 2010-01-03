@@ -1,0 +1,7 @@
+public enum JKonohaTypes {
+	CLASS_Object,
+		CLASS_Context,
+		CLASS_Boolean,
+		CLASS_Number,
+		CLASS_Int,
+		

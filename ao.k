@@ -286,6 +286,7 @@ void setupScene()
 	spheres[0].center = new Vec(-2.0, 0.0, -3.5);
 	spheres[0].radius = 0.5;
   
+<<<<<<< HEAD:ao.k
 	spheres[1] = new Sphere();
 	spheres[1].center = new Vec(-0.5, 0.0, -3.0);
 	spheres[1].radius = 0.5;  
@@ -293,11 +294,32 @@ void setupScene()
 	spheres[2] = new Sphere();
 	spheres[2].center = new Vec(1.0, 0.0, -2.2);
 	spheres[2].radius = 0.5;
+=======
+  spheres[1] = new Sphere();
+  ((Sphere)spheres[1]).center = new Vec();
+  ((Sphere)spheres[1]).center.x = -0.5;
+  ((Sphere)spheres[1]).center.y = 0.0;
+  ((Sphere)spheres[1]).center.z = -3.0;
+  ((Sphere)spheres[1]).radius = 0.5;  
+
+  spheres[2] = new Sphere(); 
+  ((Sphere)spheres[2]).center = new Vec();
+  ((Sphere)spheres[2]).center.x = 1.0;
+  ((Sphere)spheres[2]).center.y = 0.0;
+  ((Sphere)spheres[2]).center.z = -2.2;
+  ((Sphere)spheres[2]).radius = 0.5;
+
+  plane.position = new Vec();
+  plane.position.x = 0.0;
+  plane.position.y = -0.5;
+  plane.position.z = 0.0;
+>>>>>>> f1ca45eaf507a54899f8011380397b94b7f808cd:ao.k
 
 	plane.position = new Vec(0.0, -0.5, 0.0);
 	plane.normal = new Vec(0.0, 1.0, 0.0);
 }
 
+<<<<<<< HEAD:ao.k
 void main (String[] args) {
 	int[] img = new int[WIDTH * HEIGHT * 3];
 	spheres = new Sphere[3];
@@ -314,6 +336,24 @@ void main (String[] args) {
 		out.putChar(img[i]);
 	}
 	out.close();
+=======
+void run()
+{
+  int[] img = new int[WIDTH * HEIGHT * 3];
+  int i;
+  setupScene();
+  render(img, WIDTH, HEIGHT, NSUBSAMPLES);
+  
+  OutputStream out = new OutputStream("test2.ppm", "wb");
+  out << "P6" << EOL;
+  out << WIDTH << " " << HEIGHT << EOL;
+  out << "255" << EOL;
+  for (i = 0; i<|img| ; i++) {
+	out.putChar(img[i]);
+  }
+  out.close();
+  
+>>>>>>> f1ca45eaf507a54899f8011380397b94b7f808cd:ao.k
 }
 
 

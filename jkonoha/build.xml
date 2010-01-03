@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="compile" basedir="./">
+  <property name="source" value="src" />
+  <property name="dest" value="classes" />
+
+  <target name="mkdir" description="making directory">
+	<mkdir dir="${dest}" />
+  </target>
+
+  <target name="compile" depends="mkdir" description="invoke compile">
+	<javac srcdir="${source}" destdir="${dest}" />
+  </target>
+</project>
