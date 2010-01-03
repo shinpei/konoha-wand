@@ -41,6 +41,8 @@ public class JKonoha {
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 			String line;
 			JKonohaContext ctx = new JKonohaContext();
+			ctx.setInteractive(1);
+			ctx.setDebug(1);
 			System.out.print(">>> ");
 			while ((line = br.readLine()) != null) {
 				System.out.println(line);
