@@ -26,7 +26,6 @@ METHOD Memcached_new (Ctx *ctx, knh_sfp_t *sfp)
   struct memcached_st *mmc = NULL;
   mmc = memcached_create(NULL);
   
-  KNH_RETURN(ctx, sfp, new_Glue(ctx, "memcached.Memcached",
-				mmc, knh_Memcached_free);
+  KNH_RETURN(ctx, sfp, new_Glue(ctx, "memcached.Memcached", mmc, knh_Memcached_free));
 }
 
