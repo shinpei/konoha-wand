@@ -1,0 +1,10 @@
+#include <konoha.h>
+
+#ifdef KONOHA_ON_WINDOWS
+#undef METHOD
+#define METHOD void __declspec(dllexport)
+#undef KNHAPI
+#define KNHAPI(T) T __declspec(dllexport)
+#endif
+
+#include <libmemcached/memcached.h>
