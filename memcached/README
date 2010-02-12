@@ -1,0 +1,30 @@
+# libmemcached bindings for konoha v0.5
+# kindofbrown@users.sourceforge.jp
+# kindofbrown(c)2010
+
+1. introduction
+   memcached package is a client library for memcached server (http://
+danga.com/memcached). we used libmemcached (http://tangent.org/552/
+libmemcached.html).
+
+2. how to install??
+   we need libmemcached for compilation.
+
+3. how to use
+   here's a simple code for using memcached!
+
+/*--------- here we go ----------*/
+   Memcached md = new Memcached();
+   slist = ["192.168.1.1", "192.168.1.100"]
+   md.appendServerlist(slist);
+   md.setKeyValue("123", "456");
+   println(md.getValue("123"));
+
+/*--------- EOC ----------*/
+  
+4. enjoy!
+   If you find any problem, don't hesitate to contact us.
+
+
+   
+

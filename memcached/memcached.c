@@ -1,3 +1,8 @@
+/*libmemcached bindings for konoha v0.5
+ * kindofbrown@users.sourceforge.jp
+ *kindofbrown(c)2010
+ */
+
 #include <konoha.h>
 #include <err.h>
 
