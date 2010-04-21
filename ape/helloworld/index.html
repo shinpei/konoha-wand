@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "=//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr" lang="en">
+	<head>
+	<!-- load ape client -->
+	<script type="text/javascript" src="../../Build/uncompressed/apeClientJS.js"></script>
+	<title> test hello world </title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		//instantiate APE Client
+		var client = new APE.Client();
+		client.load();
+		client.addEvent('load', function() {
+			//client.core.start({"name":prompt('your name?')});
+			client.core.start({"name": "Pooridge"});
+		});
+		/*
+		client.addEvent('ready', function() {
+			console.log("your client is now connected");
+			client.core.join('testChannel');
+			
+			client.addEvent('multiPipeCreate', function(pipe, options) {
+				pipe.send("hello world");
+				console.log('sending hello world');
+			});
+			
+			client.onRaw('data', function(raw, pipe) {
+				console.log('Receiving : ' + unescape(raw.data.msg));
+			});
+		});*/
+
+		client.onCmd('connect', function(data) {
+			// the data send to APE Server
+			console.log(data);
+		});
+		client.core.onRaw('HASH_DATA',function(raw, pipe) {
+			alert(raw.data.manth);
+		});
+		client.onCmd('ready', function(data) {
+			client.core.join(['testChannel1', 'testChannel2']);
+			alert("hi");
+		});
+		
+		client.addEvent('multiPipeCreate', function(pipe, options) {
+			if (pipe.namme == 'testChannel') {
+				pipe.addEvent('userJoin', function(user, pipe) {
+					console.log('new user on pipe testchannel');
+				});
+				pipe.fireEvent('samplePipeEvent');
+				pipe.fireGlobalEvent('sampleGlobalEvent');
+			}
+		});
+		
+		
+		
+		</script>
+	</body>
+</html>
