@@ -11,13 +11,14 @@
 	<script type="text/javaScript" src="simplechat.js"></script>
 </head>
 <body>
-	<div id="ape_master_container"></div>
+	<div id="sc_master_container"></div>
 	<script type="text/javaScript">
+		console.log($('sc_master_container')); // $() is mootools macro, and it returns object
 		// Add Session.js to APE JSF to handle multitab and page refresh
 		//APE.Config.scripts.push(APE.Config.baseUrl+'/Source/Core/Session.js');
 
 		// Initialize APE_Client
-		//var chat = new APE.SimpleChat({'container':$('ape_master_container')});
+		//var chat = new APE.SimpleChat({'container':$('sc_master_container')});
 		var chat = new APE.SimpleChat();
 		// Connect to the APE Server
 		chat.load({
