@@ -9,6 +9,21 @@
 	<script type="text/javaScript" src="../../Clients/MooTools.js"></script>	
 	<script type="text/javaScript" src="../config.js"></script>
 	<script type="text/javaScript" src="simplechat.js"></script>
+
+<style>
+	#sc_sendbox_container{
+		width:500px;
+		height:500px;
+		background-color:#dddddd;
+		color:black;
+		border:solid;
+	}
+	
+	#sc_send_box{
+		background-color:black;
+		color:red;
+	}
+</style>
 </head>
 <body>
 	<div id="sc_master_container"></div>
@@ -16,10 +31,8 @@
 		console.log($('sc_master_container')); // $() is mootools macro, and it returns object
 		// Add Session.js to APE JSF to handle multitab and page refresh
 		//APE.Config.scripts.push(APE.Config.baseUrl+'/Source/Core/Session.js');
-
 		// Initialize APE_Client
-		//var chat = new APE.SimpleChat({'container':$('sc_master_container')});
-		var chat = new APE.SimpleChat();
+		var chat = new APE.SimpleChat({'container':$('sc_master_container')});
 		// Connect to the APE Server
 		chat.load({
 			identifier: 'chatdemo', // Identifier of the application 
