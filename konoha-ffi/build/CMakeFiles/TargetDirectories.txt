@@ -1,0 +1,4 @@
+/Users/shinpei/D/konoha-wand/konoha-ffi/build/package/konoha.i/CMakeFiles/i.dir
+/Users/shinpei/D/konoha-wand/konoha-ffi/build/CMakeFiles/konoha.dir
+/Users/shinpei/D/konoha-wand/konoha-ffi/build/CMakeFiles/konoha1.dir
+/Users/shinpei/D/konoha-wand/konoha-ffi/build/package/konoha.libtest/CMakeFiles/libtest.dir

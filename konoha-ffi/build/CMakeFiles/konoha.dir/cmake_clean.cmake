@@ -1,0 +1,40 @@
+FILE(REMOVE_RECURSE
+  "CMakeFiles/konoha.dir/src/lang/typing.c.o"
+  "CMakeFiles/konoha.dir/src/lang/term.c.o"
+  "CMakeFiles/konoha.dir/src/lang/asm.c.o"
+  "CMakeFiles/konoha.dir/src/lang/script.c.o"
+  "CMakeFiles/konoha.dir/src/lang/vmcodelibs.c.o"
+  "CMakeFiles/konoha.dir/src/lang/message.c.o"
+  "CMakeFiles/konoha.dir/src/main/array.c.o"
+  "CMakeFiles/konoha.dir/src/main/bytes.c.o"
+  "CMakeFiles/konoha.dir/src/main/class.c.o"
+  "CMakeFiles/konoha.dir/src/main/closure.c.o"
+  "CMakeFiles/konoha.dir/src/main/context.c.o"
+  "CMakeFiles/konoha.dir/src/main/evidence.c.o"
+  "CMakeFiles/konoha.dir/src/main/exports.c.o"
+  "CMakeFiles/konoha.dir/src/main/map.c.o"
+  "CMakeFiles/konoha.dir/src/main/memory.c.o"
+  "CMakeFiles/konoha.dir/src/main/number.c.o"
+  "CMakeFiles/konoha.dir/src/main/os.c.o"
+  "CMakeFiles/konoha.dir/src/main/query.c.o"
+  "CMakeFiles/konoha.dir/src/main/runtime.c.o"
+  "CMakeFiles/konoha.dir/src/main/security.c.o"
+  "CMakeFiles/konoha.dir/src/main/semantics.c.o"
+  "CMakeFiles/konoha.dir/src/main/ffi.c.o"
+  "CMakeFiles/konoha.dir/src/main/stack.c.o"
+  "CMakeFiles/konoha.dir/src/main/stream.c.o"
+  "CMakeFiles/konoha.dir/src/main/string.c.o"
+  "CMakeFiles/konoha.dir/src/main/struct.c.o"
+  "CMakeFiles/konoha.dir/src/main/system.c.o"
+  "CMakeFiles/konoha.dir/src/main/thread.c.o"
+  "CMakeFiles/konoha.dir/src/ext/mt19937ar.c.o"
+  "libkonoha.pdb"
+  "libkonoha.dylib"
+  "libkonoha.1.0.0.dylib"
+  "libkonoha.1.0.dylib"
+)
+
+# Per-language clean rules from dependency scanning.
+FOREACH(lang C)
+  INCLUDE(CMakeFiles/konoha.dir/cmake_clean_${lang}.cmake OPTIONAL)
+ENDFOREACH(lang)

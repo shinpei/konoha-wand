@@ -1,0 +1,3 @@
+using konoha.math.*;
+
+print Math.sin(1.3);

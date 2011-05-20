@@ -1,0 +1,1 @@
+/usr/bin/gcc  -Wall -O2 -g -dynamiclib -Wl,-headerpad_max_install_names  -o i.dylib -install_name /Users/shinpei/D/konoha-wand/konoha-ffi/build/package/konoha.i/i.dylib CMakeFiles/i.dir/i.c.o ../../libkonoha.1.0.0.dylib /usr/lib/libsqlite3.dylib /usr/lib/libdl.dylib /usr/local/lib/libffi.dylib /usr/lib/libiconv.dylib /usr/lib/libpthread.dylib /usr/local/lib/libpcre.dylib 

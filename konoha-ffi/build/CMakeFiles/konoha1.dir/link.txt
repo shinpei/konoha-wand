@@ -1,0 +1,1 @@
+/usr/bin/gcc  -Wall -O2 -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/konoha1.dir/src/konoha.c.o  -o konoha  libkonoha.1.0.0.dylib /usr/lib/libsqlite3.dylib /usr/lib/libdl.dylib /usr/local/lib/libffi.dylib /usr/lib/libiconv.dylib /usr/lib/libpthread.dylib /usr/local/lib/libpcre.dylib 
